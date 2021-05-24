@@ -11,7 +11,7 @@ router
         const addUser = await client.query(
             `INSERT INTO users (name, email, country) values ($1, $2, $3) RETURNING *`, 
             [name, email, country])
-            res.json(addUser.rows[0])
+            return res.send({message: 'New user added', data: addUser.rows[0]})
     } catch (error) {
         console.log(error.message)
     }
@@ -20,7 +20,7 @@ router
 .get(async (req, res) => {
     try {
         const getUsers = await client.query(`SELECT * FROM users`)
-        res.json(getUsers.rows)
+        return res.send({mesage: 'Successful', data: getUsers.rows})
     } catch (error) {
         console.log(error.message)
     }
@@ -34,7 +34,7 @@ router
         const { name, email, country } = req.body
         const updatedUser = await client.query(`UPDATE users SET name = $1, email = $2, country = $3 WHERE id = $4`,
         [name, email, country, id])
-        res.json(updatedUser)
+        return res.send({message: 'successful', data: updatedUser})
     } catch (error) {
         console.log(error.message)
     }
@@ -43,7 +43,7 @@ router
     try {
         const { id } = req.params
         await client.query(`DELETE FROM users WHERE id = $1`, [id])
-        res.json('User was deleted!')
+        return res.send({message: 'User was deleted successfully'})
     } catch (error) {
         console.log(error.message)
     }
