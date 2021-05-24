@@ -1,7 +1,7 @@
 {
   "name": "crud-app-database",
   "version": "1.0.0",
-  "description": "",
+  "description": "create a crud app with node and express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/Denniman/crud-app-database.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "express",
+    "postgressql"
+  ],
+  "author": "Dennis Terna",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Denniman/crud-app-database/issues"
