@@ -1,5 +1,4 @@
 ## Zuri Backend Task - CRUD App with Database
-_____
 ### Documentation
 1. This app has one route path and one route parameters 
 2. A `post` request to the `/user` route path retrieves the user details in the request body and saves them in the database.
