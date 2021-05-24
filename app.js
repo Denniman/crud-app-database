@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use('/user', router)
 
 app.get('/', (req, res) => {
-    res.send('Zuri server')
+    res.send('Welcome to Zuri server')
 })
 
 app.listen(port, () => {

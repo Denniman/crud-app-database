@@ -22,6 +22,9 @@
   "bugs": {
     "url": "https://github.com/Denniman/crud-app-database/issues"
   },
+  "engines": {
+    "node": "14.15.3"
+  },
   "homepage": "https://github.com/Denniman/crud-app-database#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
