@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use('/user', router)
 
 app.get('/', (req, res) => {
-    res.json({message: "conncted successful", data: {"name": "Sandra Kelechi",
+    res.json({message: "connected successful", data: {"name": "Sandra Kelechi",
     "email": "sandra@yahoo.com",
     "country": "Nigeria"}})
 })
