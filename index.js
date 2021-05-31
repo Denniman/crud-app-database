@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use('/user', router)
 
 app.get('/', (req, res) => {
-    res.send('This is Zuri server')
+    res.json({message: "conncted successful", data: "zuri server"})
 })
 
 app.listen(port, () => {

@@ -3,7 +3,7 @@ const router = express.Router()
 const client = require('../database/db')
 
 router
-.route('')
+.route('/')
 .post(async (req, res) => {
     try {
         const { name, email, country } = req.body
