@@ -25,11 +25,6 @@ app.get('/', async (req, res) => {
     
 })
 
-// app.get('/', (req, res) => {
-//     res.json({message: "connected successful", data: {"name": "Sandra Kelechi",
-//     "email": "sandra@yahoo.com",
-//     "country": "Nigeria"}})
-// })
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)

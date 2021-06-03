@@ -17,15 +17,6 @@ router
     }
 })
 
-// .get(async (req, res) => {
-//     try {
-//         const getUsers = await client.query(`SELECT * FROM users`)
-//         return res.send({mesage: 'Successful', data: getUsers.rows})
-//     } catch (error) {
-//         console.log(error.message)
-//     }
-// })
-
 router
 .route('/:id')
 .put(async (req, res) => {
