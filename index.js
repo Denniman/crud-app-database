@@ -15,11 +15,21 @@ app.use(bodyParser.json())
 
 app.use('/user', router)
 
-app.get('/', (req, res) => {
-    res.json({message: "connected successful", data: {"name": "Sandra Kelechi",
-    "email": "sandra@yahoo.com",
-    "country": "Nigeria"}})
+app.get('/', async (req, res) => {
+    try {
+        const getUsers = await client.query(`SELECT * FROM users`)
+        return res.send({mesage: 'Successful', data: getUsers.rows})
+    } catch (error) {
+        console.log(error.message)
+    }
+    
 })
+
+// app.get('/', (req, res) => {
+//     res.json({message: "connected successful", data: {"name": "Sandra Kelechi",
+//     "email": "sandra@yahoo.com",
+//     "country": "Nigeria"}})
+// })
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
